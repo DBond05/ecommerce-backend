@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
@@ -25,7 +24,6 @@ public class MyDataRestConfig implements RepositoryRestConfigurer{
 	@Value("${allowed.origins}")
 	private String [] theAllowedOrigins;
  private EntityManager entityManager;
- @Autowired
  public MyDataRestConfig(EntityManager theEntityManager) {
 	 entityManager = theEntityManager;
  }
